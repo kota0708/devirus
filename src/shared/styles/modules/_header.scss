@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 40px;
+  padding-left: get-vw(40);
 }
 
 .header-title-wrap {
@@ -17,8 +17,8 @@
 }
 
 .header-logo-wrap {
-  width: 200px;
-  margin-bottom: 5px;
+  width: get-vw(200);
+  margin-bottom: get-vw(5);
 }
 
 .header-logo {
@@ -38,12 +38,12 @@
 }
 
 .header-list {
-  margin: 0 60px 0 0;
+  margin: 0 get-vw(60) 0 0;
 
   &:last-child {
     margin: 0;
     background-color: $LIST_BUTTON_COLOR;
-    padding: 52px 67px;
+    padding: get-vw(52) get-vw(67);
   }
 }
 

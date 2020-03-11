@@ -1,4 +1,4 @@
-@mixin font-size ($font-size: 12) {
+@mixin font-size($font-size: 12) {
   $rem-size: $font-size * 0.1;
 
   font-size: $font-size + px;
@@ -6,14 +6,25 @@
 }
 
 /* 画像サイズによってフォントサイズを変える */
-@mixin fz-vw($fontSize: 10, $viewport: 320) {
+@mixin fz-vw($fontSize: 10, $viewport: 1400) {
   font-size: $fontSize * 1px;
   font-size: $fontSize / $viewport * 100vw;
 }
 
+/* 画像サイズによってフォントサイズを変える */
+@function get-vw($number: 30, $viewport: 1400) {
+  @return $number / $viewport * 100vw;
+}
+
 /* font-size, line-height, letter-spacingを出力 */
-@mixin font-rem($font-size, $line-height:0, $letter-spacing:0, $is_center:false) {
-  font-size: ($font-size * 0.1) * 1rem;
+@mixin font-rem(
+  $font-size,
+  $line-height: 0,
+  $letter-spacing: 0,
+  $is_center: false,
+  $viewport: 1400
+) {
+  @include fz-vw($font-size, $viewport);
   @if ($line-height!=0) {
     line-height: ($line-height / $font-size);
   }
@@ -26,7 +37,7 @@
 }
 
 /* absolute */
-@mixin absolute($top:null, $right:null, $bottom:null, $left:null) {
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
   position: absolute;
   @if $top != null {
     top: $top;

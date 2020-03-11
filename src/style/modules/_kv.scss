@@ -15,7 +15,7 @@
 .kv-text-wrap {
   position: absolute;
   top: 50%;
-  left: calc(50% - 300px);
+  left: calc(50% - #{get-vw(300)});
   transform: translate(-50%, -50%);
 }
 
