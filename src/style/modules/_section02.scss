@@ -1,0 +1,75 @@
+.section02-wrap {
+  width: 100%;
+  margin: 0 0 80px 0s;
+}
+
+.section02-inner {
+  width: 100%;
+  padding: 0 80px;
+}
+
+.section02-contents-wrap {
+  width: calc(100% - 10px);
+  display: flex;
+  margin: 0 -5px;
+}
+
+.section02-contents {
+  width: 50%;
+  padding: 0 5px;
+}
+
+.section02-contents-inner {
+  width: 100%;
+  padding: 100px 0 60px;
+}
+
+.section02-contents-inner_01 {
+  background-color: $BG_DEVIUS_COLOR;
+}
+
+.section02-contents-inner_02 {
+  background-color: $BG_KLORUS_COLOR;
+}
+
+.section02-image-wrap {
+  width: (305 / 610) * 100%;
+  margin: 0 auto;
+}
+
+.section02-description-wrap {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 26px;
+}
+
+.section02-description {
+  @include font-rem(13, 0, 2.08);
+
+  line-height: 2.153846154;
+}
+
+.section02-image {
+  width: 100%;
+  display: block;
+}
+
+.section02-logo-wrap {
+  width: (200 / 610) * 100%;
+  margin: 0 auto 70px;
+}
+
+.section02-logo {
+  width: 100%;
+  display: block;
+}
+
+.section02-arrow-wrap {
+  width: (14 / 610) * 100%;
+  margin: 0 auto;
+}
+
+.section02-arrow {
+  width: 100%;
+  display: block;
+}
