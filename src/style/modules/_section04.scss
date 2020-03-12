@@ -1,0 +1,36 @@
+.section04-wrap {
+  width: 100%;
+  position: relative;
+  background: url('/image/section04/image-01.png') center center no-repeat;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    padding-top: 64.285714286%;
+    display: block;
+  }
+}
+
+.section04-inner {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section04-contenst {
+  color: $TEXT_SECONDaRY_COLOR;
+  padding: get-vw(80) 0 0 get-vw(100);
+}
+
+.section04-label {
+  @include font-rem(20, 40);
+
+  letter-spacing: 0.142857143em;
+}
+
+.section04-title {
+  @include font-rem(24, 40);
+
+  letter-spacing: 0.2em;
+}

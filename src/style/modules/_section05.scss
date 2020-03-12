@@ -1,0 +1,26 @@
+.section05-wrap {
+  width: 100%;
+  padding: get-vw(160);
+}
+
+.section05-contents-heading {
+  width: 100;
+  text-align: center;
+}
+
+.section05-contents-title {
+  @include font-rem(24, 0);
+
+  letter-spacing: 0.2;
+  color: $TEXT_SECTION05_TITLE_COLOR;
+  margin: 0 0 get-vw(30);
+}
+
+.section05-contents-description {
+  @include font-rem(24, 0);
+
+  letter-spacing: 0.166666667;
+  color: $PRIMARY_COLOR;
+}
+
+// 内部 80
