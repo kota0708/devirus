@@ -1,0 +1,61 @@
+// メディアクエリの設定
+
+@mixin xLargeScreenWidthOver() {
+  @media (min-width: ($X_LARGE_SCREEN_WIDTH + 1)) {
+    @content;
+  }
+}
+
+@mixin xLargeScreenWidth() {
+  @media (min-width: $LARGE_SCREEN_WIDTH) and (max-width: $X_LARGE_SCREEN_WIDTH) {
+    @content;
+  }
+}
+
+@mixin xLargeScreenWidthLess() {
+  @media (max-width: $LARGE_SCREEN_WIDTH - 1) {
+    @content;
+  }
+}
+
+@mixin largeScreenWidthOver() {
+  @media (min-width: ($LARGE_SCREEN_WIDTH + 1)) {
+    @content;
+  }
+}
+
+@mixin largeScreenWidth() {
+  @media (min-width: $MEDIUM_SCREEN_WIDTH + 1) and (max-width: $LARGE_SCREEN_WIDTH) {
+    @content;
+  }
+}
+
+@mixin largeScreenWidthLess() {
+  @media (max-width: $MEDIUM_SCREEN_WIDTH) {
+    @content;
+  }
+}
+
+@mixin mediumScreenWidthOver() {
+  @media (min-width: ($MEDIUM_SCREEN_WIDTH + 1)) {
+    @content;
+  }
+}
+
+@mixin mediumScreenWidth() {
+  @media (min-width: $SMALL_SCREEN_WIDTH) and (max-width: $MEDIUM_SCREEN_WIDTH) {
+    @content;
+  }
+}
+
+@mixin mediumScreenWidthLess() {
+  @media (max-width: $SMALL_SCREEN_WIDTH - 1) {
+    @content;
+  }
+}
+
+@mixin smallScreenWidthOver() {
+  @media (min-width: ($SMALL_SCREEN_WIDTH)) {
+    @content;
+  }
+}

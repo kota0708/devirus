@@ -33,7 +33,7 @@
 .section05-contents-description {
   @include font-rem(24, 0);
 
-  letter-spacing: 0.166666667em;
+  letter-spacing: 0.06em;
   color: $PRIMARY_COLOR;
 }
 
@@ -111,11 +111,11 @@
   @include font-rem(13, 0);
 
   margin: 0 0 get-vw(30);
-  letter-spacing: 0.203125em;
+  letter-spacing: 0.049230769em;
 }
 
 .section05-contents-list-description {
   @include font-rem(13, 20);
 
-  letter-spacing: 0.203125em;
+  letter-spacing: 0.00203125em;
 }
