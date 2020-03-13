@@ -1,0 +1,23 @@
+.footer-wrap {
+  width: 100%;
+}
+
+.footer-inner {
+  width: 100%;
+  padding: 0 get-vw(80);
+}
+
+.footer-contents {
+  width: 100%;
+  padding: get-vw(160) 0 get-vw(180);
+}
+
+// 1240
+// 415
+// 342
+// 483
+
+.footer-contents-items {
+  width: 100%;
+  display: flex;
+}
