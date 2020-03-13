@@ -107,7 +107,7 @@
 .section06-contents-detail-title {
   @include font-rem(20);
 
-  letter-spacing: 0.166666667;
+  letter-spacing: 0.166666667em;
   line-height: 1;
   color: $PRIMARY_COLOR;
   padding: 0 0 get-vw(20);
@@ -159,7 +159,7 @@
   @include font-rem(13);
 
   line-height: 1;
-  letter-spacing: 0.158536585;
+  letter-spacing: 0.158536585em;
   color: $PRIMARY_COLOR;
   display: flex;
   padding: get-vw(20) 0;
@@ -179,7 +179,7 @@
 
   display: inline-block;
   line-height: 1;
-  letter-spacing: 0.203125;
+  letter-spacing: 0.203125em;
   color: $PRIMARY_COLOR;
   padding: 0 0 get-vw(10);
   border-bottom: solid 1px $PRIMARY_COLOR;

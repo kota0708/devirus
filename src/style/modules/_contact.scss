@@ -1,0 +1,84 @@
+.contact-wrap {
+  width: 100%;
+  background-color: $PRIMARY_COLOR;
+  padding: get-vw(160) 0;
+}
+
+.contact-inner {
+  width: 100%;
+}
+
+.contact-contents {
+  width: (800 / 1400) * 100%;
+  padding: get-vw(160) 0;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.contact-contents-inner {
+  width: (480 / 800) * 100%;
+  margin: 0 auto;
+}
+
+.contact-contents-heading {
+  width: 100%;
+  margin: 0 0 get-vw(80);
+}
+
+.contact-contents-title {
+  @include font-rem(42, 40);
+
+  font-family: 'Acumin Pro Condensed';
+  line-height: 1.615384615;
+  letter-spacing: 0.2625em;
+  display: inline-block;
+  border-bottom: solid 1px rgba(#fff, 0.5);
+  color: #fff;
+  margin: 0 0 get-vw(17);
+}
+
+.contact-contents-label {
+  @include font-rem(16);
+
+  line-height: 1;
+  letter-spacing: 0.133333333em;
+  display: block;
+  color: $TEXT_DETAIL_COLOR;
+}
+
+.contact-contents-description {
+  @include font-rem(13, 34);
+
+  color: $TEXT_DETAIL_COLOR;
+}
+
+.contact-contents-detail-wrap {
+  width: (520 / 800) * 100%;
+  position: absolute;
+  top: 50%;
+  right: -55%;
+  transform: translate(0, -50%);
+}
+
+.contact-contents-detail-inner {
+  width: 100%;
+}
+// 440
+// 800
+.contact-contents-detail {
+  padding: get-vw(37) 0 get-vw(35);
+  text-align: center;
+  background-color: #fff;
+  margin: 0 0 get-vw(17);
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.contact-contents-detail-text {
+  @include font-rem(16, 25);
+
+  color: $PRIMARY_COLOR;
+  letter-spacing: 0.133333333em;
+}
