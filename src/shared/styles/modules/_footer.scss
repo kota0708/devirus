@@ -4,12 +4,11 @@
 
 .footer-inner {
   width: 100%;
-  padding: 0 get-vw(80);
 }
 
 .footer-contents {
   width: 100%;
-  padding: get-vw(160) 0 get-vw(180);
+  padding: get-vw(160) get-vw(80) get-vw(180);
 }
 
 // 1240
@@ -20,4 +19,86 @@
 .footer-contents-items {
   width: 100%;
   display: flex;
+}
+
+.footer-contents-item_01 {
+  width: (415 / 1240) * 100%;
+}
+
+.footer-contents-item_02 {
+  width: (342 / 1240) * 100%;
+}
+
+.footer-contents-item_03 {
+  width: (483 / 1240) * 100%;
+}
+
+.footer-contents-logo-wrap {
+  width: (200 / 415) * 100%;
+}
+
+.footer-contents-logo {
+  width: 100%;
+  display: block;
+}
+
+.footer-contents-item-title {
+  @include font-rem(24);
+
+  font-family: 'Acumin Pro Condensed';
+  line-height: 1;
+  letter-spacing: 0.026666667em;
+  padding: 0 0 get-vw(20);
+  margin: 0 0 get-vw(40);
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 64px;
+    height: 1px;
+    background-color: $BORDER_COLOR;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.footer-contents-lists {
+  width: 100%;
+}
+
+.footer-contents-label {
+  @include font-rem(13);
+
+  line-height: 1;
+  letter-spacing: 0.092307692em;
+  margin: 0 0 get-vw(24);
+  color: $FOOTER_LIST_TITLE_COLOR;
+}
+
+.footer-contents-list-wrap {
+  width: 100%;
+}
+
+.footer-contents-list {
+  @include font-rem(13);
+
+  line-height: 2.307692308;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.footer-copywrite-wrap {
+  text-align: center;
+
+  padding: get-vw(72) get-vw(80);
+  border-top: solid 1px $BORDER_COLOR;
+}
+
+.footer-copywrite {
+  @include font-rem(12);
+
+  color: $TEXT_COPYLIGHT;
 }
