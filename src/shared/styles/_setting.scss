@@ -1,5 +1,6 @@
 @font-face {
   font-family: 'Acumin Pro Condensed';
+  font-weight: 700;
   src: url('/shared/fonts/AcuminProCondensed.eot');
   src:
     url('/shared/fonts/AcuminProCondensed.ttf') format('truetype'),
@@ -23,7 +24,7 @@ body {
     'メイリオ',
     sans-serif;
   position: relative;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 h1,
@@ -33,6 +34,7 @@ h4,
 h5,
 h6 {
   font-size: 100%;
+  font-weight: 400;
 }
 
 li {

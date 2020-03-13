@@ -1,0 +1,138 @@
+.section07-wrap {
+  width: 100%;
+}
+
+.section07-inner {
+  width: 100%;
+  padding: get-vw(100) 0 get-vw(80);
+  background-color: $BG_KLORUS_COLOR;
+}
+
+.section07-heading-wrap {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 get-vw(157);
+}
+
+.section07-heading-image-wrap {
+  width: (305 / 1400) * 100%;
+  margin: 0 auto;
+}
+
+.section07-heading-image {
+  width: 100%;
+  display: block;
+}
+
+.section07-heading-texts {
+  width: 100%;
+}
+
+.section07-heading-description {
+  @include font-rem(13, 25);
+
+  letter-spacing: 0.08125em;
+  font-weight: 400;
+  margin: 0 0 get-vw(25);
+}
+
+.section07-heading-title {
+  width: (198 / 1400) * 100%;
+  margin: 0 auto;
+}
+
+.section07-contents-wrap {
+  padding: 0 get-vw(160);
+}
+
+.section07-contents-inner {
+  background-color: #fff;
+  padding: get-vw(160);
+}
+
+.section07-contents-heading-wrap {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 get-vw(80);
+}
+
+.section07-contents-heading-title {
+  @include font-rem(24, 0);
+
+  letter-spacing: 0.2em;
+  color: $TEXT_SECTION06_TITLE_COLOR;
+  margin: 0 0 get-vw(27);
+}
+
+.section07-contents-heading-description {
+  @include font-rem(20, 0);
+
+  letter-spacing: 0.166666667em;
+  color: $PRIMARY_COLOR;
+}
+
+.section07-contents {
+  margin: 0 0 get-vw(160);
+}
+
+.section07-contents-image-wrap {
+  width: 100%;
+  margin: 0 0 get-vw(60);
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.section07-contents-image {
+  width: 100%;
+  display: block;
+}
+
+.section07-specification {
+  width: 100%;
+}
+
+.section07-specification-title {
+  @include font-rem(24);
+
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0 0 get-vw(40);
+  color: $TEXT_SECTION06_TITLE_COLOR;
+}
+
+.section07-specification-lists-wrap {
+  width: 100%;
+}
+
+.section07-specification-lists {
+  @include font-rem(13);
+
+  line-height: 1;
+  letter-spacing: 0.158536585;
+  color: $PRIMARY_COLOR;
+  display: flex;
+  padding: get-vw(20) 0;
+  border-bottom: solid 1px $BORDER_COLOR;
+
+  &:first-child {
+    border-top: solid 1px $BORDER_COLOR;
+  }
+}
+
+.section07-specification-list-title {
+  width: (260 / 720) * 100%;
+}
+
+.section07-specification-detail {
+  @include font-rem(13);
+
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: 0.203125;
+  color: $PRIMARY_COLOR;
+  padding: 0 0 get-vw(10);
+  border-bottom: solid 1px $PRIMARY_COLOR;
+}
