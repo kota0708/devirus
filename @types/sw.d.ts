@@ -17,3 +17,18 @@ interface Element {
   parentNode: any;
   nextElementSibling: any;
 }
+
+interface DOMRect {
+  left: number;
+  right: number;
+  top: number;
+  bottom: number;
+}
+
+interface ClientRect {
+  // extension
+  left: number;
+  right: number;
+  top: number;
+  bottom: number;
+}

@@ -1,7 +1,7 @@
+import hashScroll from './_hash-scroll';
+
 (() => {
   window.addEventListener('DOMContentLoaded', () => {
-    let test: string;
-
-    console.log(test);
+    hashScroll('js-header-link');
   });
 })();
