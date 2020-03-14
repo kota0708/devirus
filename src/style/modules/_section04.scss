@@ -9,6 +9,14 @@
     padding-top: 64.285714286%;
     display: block;
   }
+
+  @include largeScreenWidthLess() {
+    background-image: url('/image/section04/image-sp-01.png');
+
+    &::before {
+      padding-top: 133.3333333%;
+    }
+  }
 }
 
 .section04-inner {
@@ -21,16 +29,42 @@
 .section04-contenst {
   color: $TEXT_SECONDARY_COLOR;
   padding: get-vw(80) 0 0 get-vw(100);
+
+  @include largeScreenWidthLess() {
+    padding: get-vw(60, $SP_DESIGN_WIDTH) get-vw(32, $SP_DESIGN_WIDTH) 0;
+  }
 }
 
 .section04-label {
   @include font-rem(20, 40);
 
   letter-spacing: 0.142857143em;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(13, $viewport: $SP_DESIGN_WIDTH);
+
+    line-height: 1.538461538;
+    letter-spacing: 0.092307692em;
+  }
 }
 
 .section04-title {
   @include font-rem(24, 40);
 
   letter-spacing: 0.2em;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(20, $viewport: $SP_DESIGN_WIDTH);
+
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+  }
+}
+
+.section04-newline {
+  display: none;
+
+  @include largeScreenWidthLess() {
+    display: block;
+  }
 }
