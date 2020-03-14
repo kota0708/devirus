@@ -64,12 +64,9 @@
 
 .header-list_button {
   margin: 0;
-  background-color: $LIST_BUTTON_COLOR;
-  padding: get-vw(52) get-vw(67);
 
   @include largeScreenWidthLess() {
     display: block;
-    padding: get-vw(30, $SP_DESIGN_WIDTH);
   }
 }
 
@@ -91,4 +88,11 @@
 
 .header-link_last {
   color: #fff;
+  padding: get-vw(52) get-vw(67);
+  background-color: $LIST_BUTTON_COLOR;
+  display: block;
+
+  @include largeScreenWidthLess() {
+    padding: get-vw(30, $SP_DESIGN_WIDTH);
+  }
 }
