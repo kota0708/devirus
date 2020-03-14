@@ -56,7 +56,7 @@
   }
 }
 
-.section03-contents-inner_05 {
+.section03-contents_05 {
   @include largeScreenWidthLess() {
     padding: 0 get-vw(32, $SP_DESIGN_WIDTH);
   }
