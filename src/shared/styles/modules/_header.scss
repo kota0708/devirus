@@ -12,6 +12,10 @@
   justify-content: space-between;
   align-items: center;
   padding-left: get-vw(40);
+
+  @include largeScreenWidthLess() {
+    padding-left: get-vw(20, $SP_DESIGN_WIDTH);
+  }
 }
 
 .header-title-wrap {

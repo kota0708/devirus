@@ -6,12 +6,20 @@
   width: 100%;
   padding: get-vw(100) 0 get-vw(80);
   background-color: $BG_KLORUS_COLOR;
+
+  @include largeScreenWidthLess() {
+    padding: get-vw(30, $SP_DESIGN_WIDTH) 0 get-vw(40, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section07-heading-wrap {
   width: 100%;
   text-align: center;
   margin: 0 0 get-vw(157);
+
+  @include largeScreenWidthLess() {
+    margin: 0 0 get-vw(55, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section07-heading-image-wrap {
@@ -34,45 +42,83 @@
   letter-spacing: 0.08125em;
   font-weight: 400;
   margin: 0 0 get-vw(25);
+
+  @include largeScreenWidthLess() {
+    @include font-rem(11, $viewport: $SP_DESIGN_WIDTH);
+
+    line-height: 1.545454545;
+    font-weight: 100;
+  }
 }
 
 .section07-heading-title {
   width: (198 / 1400) * 100%;
   margin: 0 auto;
+
+  @include largeScreenWidthLess() {
+    width: (122 / $SP_DESIGN_WIDTH) * 100%;
+  }
 }
 
 .section07-contents-wrap {
   padding: 0 get-vw(160);
+
+  @include largeScreenWidthLess() {
+    padding: 0 get-vw(10, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section07-contents-inner {
   background-color: #fff;
   padding: get-vw(160);
+
+  @include largeScreenWidthLess() {
+    padding: get-vw(80, $SP_DESIGN_WIDTH) 0;
+  }
 }
 
 .section07-contents-heading-wrap {
   width: 100%;
   text-align: center;
   margin: 0 0 get-vw(80);
+
+  @include largeScreenWidthLess() {
+    margin: 0 0 get-vw(65, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section07-contents-heading-title {
   @include font-rem(24, 0);
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.002em;
   color: $TEXT_SECTION06_TITLE_COLOR;
   margin: 0 0 get-vw(27);
+
+  @include largeScreenWidthLess() {
+    @include font-rem(24, 40, $viewport: $SP_DESIGN_WIDTH);
+
+    margin: 0 0 get-vw(27, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section07-contents-heading-description {
   @include font-rem(20, 0);
 
-  letter-spacing: 0.166666667em;
+  letter-spacing: 0.001083333em;
   color: $PRIMARY_COLOR;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(13, 22, $viewport: $SP_DESIGN_WIDTH);
+  }
 }
 
 .section07-contents {
   margin: 0 0 get-vw(160);
+
+  @include largeScreenWidthLess() {
+    overflow: hidden;
+    margin: 0 0 get-vw(80, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section07-contents-image-wrap {
@@ -82,15 +128,33 @@
   &:last-child {
     margin: 0;
   }
+
+  @include largeScreenWidthLess() {
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 0 get-vw(60, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section07-contents-image {
   width: 100%;
   display: block;
+
+  @include largeScreenWidthLess() {
+    min-width: 820px;
+    padding: 0 get-vw(20, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section07-specification {
   width: 100%;
+
+  @include largeScreenWidthLess() {
+    padding: 0 get-vw(20, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section07-specification-title {
@@ -101,6 +165,11 @@
   text-align: center;
   margin: 0 0 get-vw(40);
   color: $TEXT_SECTION06_TITLE_COLOR;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(24, $viewport: $SP_DESIGN_WIDTH);
+    margin: 0 0 get-vw(74, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section07-specification-lists-wrap {
@@ -120,10 +189,31 @@
   &:first-child {
     border-top: solid 1px $BORDER_COLOR;
   }
+
+  @include largeScreenWidthLess() {
+    @include font-rem(12, $viewport: $SP_DESIGN_WIDTH);
+
+    display: block;
+    padding: 0 0 get-vw(20, $SP_DESIGN_WIDTH);
+    margin: 0 0 get-vw(40, $SP_DESIGN_WIDTH);
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
 }
 
 .section07-specification-list-title {
   width: (260 / 720) * 100%;
+
+  @include largeScreenWidthLess() {
+    width: 100%;
+    margin: 0 0 get-vw(12, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section07-specification-detail {
@@ -135,4 +225,18 @@
   color: $PRIMARY_COLOR;
   padding: 0 0 get-vw(10);
   border-bottom: solid 1px $PRIMARY_COLOR;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(13, 20, $viewport: $SP_DESIGN_WIDTH);
+
+    border: 0;
+  }
+}
+
+.section07-newline {
+  display: none;
+
+  @include largeScreenWidthLess() {
+    display: block;
+  }
 }

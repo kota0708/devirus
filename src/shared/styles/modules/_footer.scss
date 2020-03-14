@@ -9,6 +9,12 @@
 .footer-contents {
   width: 100%;
   padding: get-vw(160) get-vw(80) get-vw(180);
+
+  @include largeScreenWidthLess() {
+    padding:
+      get-vw(73, $SP_DESIGN_WIDTH) get-vw(22, $SP_DESIGN_WIDTH)
+      get-vw(40, $SP_DESIGN_WIDTH);
+  }
 }
 
 // 1240
@@ -19,22 +25,45 @@
 .footer-contents-items {
   width: 100%;
   display: flex;
+
+  @include largeScreenWidthLess() {
+    display: block;
+  }
 }
 
 .footer-contents-item_01 {
   width: (415 / 1240) * 100%;
+
+  @include largeScreenWidthLess() {
+    width: 100%;
+    margin: 0 0 get-vw(65, $SP_DESIGN_WIDTH);
+  }
 }
 
 .footer-contents-item_02 {
   width: (342 / 1240) * 100%;
+
+  @include largeScreenWidthLess() {
+    width: 100%;
+    margin: 0 0 get-vw(40, $SP_DESIGN_WIDTH);
+  }
 }
 
 .footer-contents-item_03 {
   width: (483 / 1240) * 100%;
+
+  @include largeScreenWidthLess() {
+    width: 100%;
+  }
 }
 
 .footer-contents-logo-wrap {
   width: (200 / 415) * 100%;
+
+  @include largeScreenWidthLess() {
+    width: (120 / 331) * 100%;
+    margin: 0 auto;
+  }
 }
 
 .footer-contents-logo {
@@ -61,6 +90,14 @@
     bottom: 0;
     left: 0;
   }
+
+  @include largeScreenWidthLess() {
+    @include font-rem(16, $viewport: $SP_DESIGN_WIDTH);
+
+    margin-bottom: get-vw(20, $SP_DESIGN_WIDTH);
+    letter-spacing: 0.04em;
+    padding: 0 0 get-vw(20, $SP_DESIGN_WIDTH);
+  }
 }
 
 .footer-contents-lists {
@@ -74,6 +111,13 @@
   letter-spacing: 0.092307692em;
   margin: 0 0 get-vw(24);
   color: $FOOTER_LIST_TITLE_COLOR;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(12, $viewport: $SP_DESIGN_WIDTH);
+
+    margin-bottom: get-vw(20, $SP_DESIGN_WIDTH);
+    letter-spacing: 0.00375em;
+  }
 }
 
 .footer-contents-list-wrap {
@@ -83,10 +127,18 @@
 .footer-contents-list {
   @include font-rem(13);
 
+  color: $PRIMARY_COLOR;
   line-height: 2.307692308;
 
   &:last-child {
     margin: 0;
+  }
+
+  @include largeScreenWidthLess() {
+    @include font-rem(12, 24, $viewport: $SP_DESIGN_WIDTH);
+
+    letter-spacing: 0.00375em;
+    font-weight: bold;
   }
 }
 
@@ -95,10 +147,21 @@
 
   padding: get-vw(72) get-vw(80);
   border-top: solid 1px $BORDER_COLOR;
+
+  @include largeScreenWidthLess() {
+    padding: 0 0 get-vw(40, $SP_DESIGN_WIDTH);
+    border: 0;
+  }
 }
 
 .footer-copywrite {
   @include font-rem(12);
 
   color: $TEXT_COPYLIGHT;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(12, $viewport: $SP_DESIGN_WIDTH);
+
+    letter-spacing: 0.00375em;
+  }
 }

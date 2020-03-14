@@ -2,6 +2,11 @@
   width: 100%;
   background-color: $PRIMARY_COLOR;
   padding: get-vw(160) 0;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(13, 20, $viewport: $SP_DESIGN_WIDTH);
+    padding: get-vw(80, $SP_DESIGN_WIDTH) get-vw(32, $SP_DESIGN_WIDTH);
+  }
 }
 
 .contact-inner {
@@ -13,16 +18,30 @@
   padding: get-vw(160) 0;
   position: relative;
   background-color: rgba(255, 255, 255, 0.02);
+
+  @include largeScreenWidthLess() {
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+  }
 }
 
 .contact-contents-inner {
   width: (480 / 800) * 100%;
   margin: 0 auto;
+
+  @include largeScreenWidthLess() {
+    width: 100%;
+  }
 }
 
 .contact-contents-heading {
   width: 100%;
   margin: 0 0 get-vw(80);
+
+  @include largeScreenWidthLess() {
+    margin: 0 0 get-vw(30, $SP_DESIGN_WIDTH);
+  }
 }
 
 .contact-contents-title {
@@ -32,9 +51,15 @@
   line-height: 1.615384615;
   letter-spacing: 0.2625em;
   display: inline-block;
-  border-bottom: solid 1px rgba(#fff, 0.5);
+  border-bottom: solid 1px rgba($BORDER_COLOR, 0.5);
   color: #fff;
   margin: 0 0 get-vw(17);
+
+  @include largeScreenWidthLess() {
+    @include font-rem(32, $viewport: $SP_DESIGN_WIDTH);
+
+    margin: 0 0 get-vw(17, $SP_DESIGN_WIDTH);
+  }
 }
 
 .contact-contents-label {
@@ -44,12 +69,21 @@
   letter-spacing: 0.133333333em;
   display: block;
   color: $TEXT_DETAIL_COLOR;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(16, $viewport: $SP_DESIGN_WIDTH);
+  }
 }
 
 .contact-contents-description {
   @include font-rem(13, 34);
 
+  letter-spacing: 0.046153846em;
   color: $TEXT_DETAIL_COLOR;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(13, 30, $viewport: $SP_DESIGN_WIDTH);
+  }
 }
 
 .contact-contents-detail-wrap {
@@ -58,6 +92,13 @@
   top: 50%;
   right: -55%;
   transform: translate(0, -50%);
+
+  @include largeScreenWidthLess() {
+    width: 100%;
+    position: static;
+    margin: get-vw(40, $SP_DESIGN_WIDTH) 0 0;
+    transform: translate(0, 0);
+  }
 }
 
 .contact-contents-detail-inner {
@@ -74,11 +115,20 @@
   &:last-child {
     margin: 0;
   }
+
+  @include largeScreenWidthLess() {
+    padding: get-vw(35, $SP_DESIGN_WIDTH) 0;
+    margin: 0 0 get-vw(10, $SP_DESIGN_WIDTH);
+  }
 }
 
 .contact-contents-detail-text {
   @include font-rem(16, 25);
 
   color: $PRIMARY_COLOR;
-  letter-spacing: 0.133333333em;
+  letter-spacing: 0.075em;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(16, 25, $viewport: $SP_DESIGN_WIDTH);
+  }
 }
