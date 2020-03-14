@@ -20,7 +20,12 @@
 
 .header-logo-wrap {
   width: get-vw(200);
-  margin-bottom: get-vw(5);
+  margin: 0 0 get-vw(5);
+
+  @include largeScreenWidthLess() {
+    width: get-vw(120, $SP_DESIGN_WIDTH);
+    margin: 0 0 get-vw(10, $SP_DESIGN_WIDTH);
+  }
 }
 
 .header-logo {
@@ -32,6 +37,12 @@
   @include font-rem(16, 0, 2.56);
 
   color: $TEXT_PRIMARY_COLOR;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(13, $viewport: $SP_DESIGN_WIDTH);
+    line-height: 1;
+    letter-spacing: 0.123076923;
+  }
 }
 
 .header-list-wrap {
@@ -42,10 +53,19 @@
 .header-list {
   margin: 0 get-vw(60) 0 0;
 
-  &:last-child {
-    margin: 0;
-    background-color: $LIST_BUTTON_COLOR;
-    padding: get-vw(52) get-vw(67);
+  @include largeScreenWidthLess() {
+    display: none;
+  }
+}
+
+.header-list_button {
+  margin: 0;
+  background-color: $LIST_BUTTON_COLOR;
+  padding: get-vw(52) get-vw(67);
+
+  @include largeScreenWidthLess() {
+    display: block;
+    padding: get-vw(30, $SP_DESIGN_WIDTH);
   }
 }
 
@@ -55,6 +75,14 @@
   color: $TEXT_PRIMARY_COLOR;
   text-decoration: none;
   font-weight: 700;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(13, $viewport: $SP_DESIGN_WIDTH);
+
+    width: get-vw(120, $SP_DESIGN_WIDTH);
+    line-height: 1;
+    letter-spacing: 0.184615385;
+  }
 }
 
 .header-link_last {

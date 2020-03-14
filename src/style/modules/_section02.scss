@@ -1,27 +1,55 @@
 .section02-wrap {
   width: 100%;
-  margin: 0 0 80px;
+  margin: 0 0 get-vw(80);
+
+  @include largeScreenWidthLess() {
+    margin: 0 0 get-vw(30, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section02-inner {
   width: 100%;
   padding: 0 get-vw(80);
+
+  @include largeScreenWidthLess() {
+    padding: 0 get-vw(32, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section02-contents-wrap {
-  width: calc(100% + 10px);
+  width: calc(100% + #{get-vw(10)});
   display: flex;
-  margin: 0 -5px;
+  margin: 0 get-vw(-5);
+
+  @include largeScreenWidthLess() {
+    width: 100%;
+    display: block;
+    margin: 0;
+  }
 }
 
 .section02-contents {
   width: 50%;
-  padding: 0 5px;
+  padding: 0 get-vw(5);
+
+  @include largeScreenWidthLess() {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 get-vw(10, $SP_DESIGN_WIDTH);
+
+    &:last-child {
+      margin: 0;
+    }
+  }
 }
 
 .section02-contents-inner {
   width: 100%;
   padding: get-vw(100) 0 get-vw(60);
+
+  @include largeScreenWidthLess() {
+    padding: get-vw(28, $SP_DESIGN_WIDTH) 0 get-vw(16, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section02-contents-inner_01 {
@@ -35,18 +63,33 @@
 .section02-image-wrap {
   width: (305 / 610) * 100%;
   margin: 0 auto;
+
+  @include largeScreenWidthLess() {
+    width: (112 / 312) * 100%;
+  }
 }
 
 .section02-description-wrap {
   width: 100%;
   text-align: center;
   margin: 0 0 get-vw(26);
+
+  @include largeScreenWidthLess() {
+    margin: 0 0 get-vw(12, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section02-description {
   @include font-rem(13, 0, 2.08);
 
   line-height: 2.153846154;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(11, $viewport: $SP_DESIGN_WIDTH);
+
+    line-height: 1.545454545;
+    letter-spacing: 0.109090909em;
+  }
 }
 
 .section02-image {
@@ -57,6 +100,12 @@
 .section02-logo-wrap {
   width: (200 / 610) * 100%;
   margin: 0 auto get-vw(70);
+
+  @include largeScreenWidthLess() {
+    width: (122 / 312) * 100%;
+
+    margin: 0 auto get-vw(22, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section02-logo {
@@ -67,6 +116,10 @@
 .section02-arrow-wrap {
   width: (14 / 610) * 100%;
   margin: 0 auto;
+
+  @include largeScreenWidthLess() {
+    width: (16 / 312) * 100%;
+  }
 }
 
 .section02-arrow {

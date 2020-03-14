@@ -3,7 +3,11 @@
   height: 100vh;
   background: url('/image/kv.png') center center no-repeat;
   background-size: cover;
-  margin-bottom: 80px;
+  margin: 0 0 get-vw(80);
+
+  @include largeScreenWidthLess() {
+    margin: 0 0 get-vw(30, $SP_DESIGN_WIDTH);
+  }
 }
 
 .kv-inner {
@@ -17,10 +21,22 @@
   top: 50%;
   left: calc(50% - #{get-vw(300)});
   transform: translate(-50%, -50%);
+
+  @include largeScreenWidthLess() {
+    top: auto;
+    left: 8.533333333%;
+    bottom: 19.04047976%;
+    transform: translate(0, 0);
+  }
 }
 
 .kv-text {
   @include font-rem(20, 40, 4);
 
   color: $TEXT_PRIMARY_COLOR;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(16, 28, $viewport: $SP_DESIGN_WIDTH);
+    letter-spacing: 0.125;
+  }
 }

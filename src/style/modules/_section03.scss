@@ -1,6 +1,10 @@
 .section03-wrap {
   padding: get-vw(160) 0 get-vw(385);
   background-color: $PRIMARY_COLOR;
+
+  @include largeScreenWidthLess() {
+    padding: get-vw(80, $SP_DESIGN_WIDTH) 0;
+  }
 }
 
 .section03-inner {
@@ -11,13 +15,27 @@
   width: 100%;
   margin: 0 0 get-vw(160);
 
+  @include largeScreenWidthLess() {
+    margin: 0 0 get-vw(80, $SP_DESIGN_WIDTH);
+  }
+
   &:last-child {
     margin: 0;
   }
 }
 
+.section03-contents_01 {
+  @include largeScreenWidthLess() {
+    padding: 0 get-vw(32, $SP_DESIGN_WIDTH);
+  }
+}
+
 .section03-contents_02 {
   margin: 0 0 get-vw(280);
+
+  @include largeScreenWidthLess() {
+    padding: 0 get-vw(32, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section03-contents_04 {
@@ -30,11 +48,27 @@
     padding-top: (600 / 1400) * 100%;
     display: block;
   }
+
+  @include largeScreenWidthLess() {
+    &::before {
+      padding-top: (500 / 375) * 100%;
+    }
+  }
+}
+
+.section03-contents-inner_05 {
+  @include largeScreenWidthLess() {
+    padding: 0 get-vw(32, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section03-contents-inner {
   width: 100%;
   display: flex;
+
+  @include largeScreenWidthLess() {
+    flex-direction: column;
+  }
 }
 
 .section03-contents-inner_01 {
@@ -43,6 +77,10 @@
 
 .section03-contents-inner_02 {
   justify-content: flex-end;
+
+  @include largeScreenWidthLess() {
+    flex-direction: column-reverse;
+  }
 }
 
 .section03-contents-inner_04 {
@@ -58,6 +96,10 @@
 
 .section03-contents-detail {
   background-color: rgba(255, 255, 255, 0.02);
+
+  @include largeScreenWidthLess() {
+    background-color: transparent;
+  }
 }
 
 .section03-contents-detail_01,
@@ -65,6 +107,11 @@
 .section03-contents-detail_05 {
   width: (800 / 1400) * 100%;
   padding: get-vw(160) 0;
+
+  @include largeScreenWidthLess() {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .section03-contents-detail-inner {
@@ -75,6 +122,10 @@
 .section03-contents-detail-inner_02,
 .section03-contents-detail-inner_05 {
   width: (480 / 800) * 100%;
+
+  @include largeScreenWidthLess() {
+    width: 100%;
+  }
 }
 
 .section03-image-wrap {
@@ -84,12 +135,22 @@
 .section03-image-wrap_01 {
   width: (520 / 1400) * 100%;
   margin: 0 0 0 -7%;
+
+  @include largeScreenWidthLess() {
+    width: (258 / 312) * 100%;
+    margin: get-vw(40, $SP_DESIGN_WIDTH) 0;
+  }
 }
 
 .section03-image-wrap_02,
 .section03-image-wrap_05 {
   width: (520 / 1400) * 100%;
   position: relative;
+
+  @include largeScreenWidthLess() {
+    width: 100%;
+    margin: get-vw(40, $SP_DESIGN_WIDTH) 0 0;
+  }
 }
 
 .section03-image-inner_02 {
@@ -97,6 +158,10 @@
   position: absolute;
   top: 10%;
   left: 10%;
+
+  @include largeScreenWidthLess() {
+    position: static;
+  }
 }
 
 .section03-image-inner_05 {
@@ -104,12 +169,20 @@
   position: absolute;
   top: 20%;
   right: 10%;
+
+  @include largeScreenWidthLess() {
+    position: static;
+  }
 }
 
 .section03-image {
   width: 100%;
   display: block;
   margin: 0 0 get-vw(20);
+
+  @include largeScreenWidthLess() {
+    margin: 0 0 get-vw(10, $SP_DESIGN_WIDTH);
+  }
 
   &:last-child {
     margin: 0;
@@ -139,6 +212,10 @@
 .section03-contents-heading {
   width: 100%;
   margin: 0 0 get-vw(80);
+
+  @include largeScreenWidthLess() {
+    margin: 0 0 get-vw(30, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section03-contents-title {
@@ -146,15 +223,34 @@
 
   color: #fff;
   font-family: 'Acumin Pro Condensed';
-  border-bottom: solid 1px #fff;
+  border-bottom: solid 1px rgba(#fff, 0.5);
   display: inline-block;
   margin-bottom: get-vw(20);
+
+  @include largeScreenWidthLess() {
+    @include font-rem(32, $viewport: $SP_DESIGN_WIDTH);
+
+    margin-bottom: get-vw(20, $SP_DESIGN_WIDTH);
+  }
+}
+
+.section03-contents-title_05 {
+  @include largeScreenWidthLess() {
+    padding: 0 0 get-vw(7, $SP_DESIGN_WIDTH);
+  }
 }
 
 .section03-contents-label {
   @include font-rem(16, 0, 3.2);
 
   color: #fff;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(16, $viewport: $SP_DESIGN_WIDTH);
+
+    line-height: 1;
+    letter-spacing: 0.125;
+  }
 }
 
 .section03-contents-description-wrap {
@@ -165,18 +261,34 @@
   @include font-rem(13, 34, 0.83);
 
   font-weight: 400;
-  color: #fff;
+  color: $TEXT_DETAIL_COLOR;
+
+  @include largeScreenWidthLess() {
+    @include font-rem(13, $viewport: $SP_DESIGN_WIDTH);
+
+    line-height: 2.307692308;
+    letter-spacing: 0.049230769;
+  }
 }
 
 .section03-image-column {
-  width: calc(100% + #{get-vw(20)});
+  width: calc(100% + 20px);
   display: flex;
-  margin: 0 get-vw(-10);
+  margin: 0 -10px;
+
+  @include largeScreenWidthLess() {
+    width: calc(100% + 10px);
+    margin: 0 -5px;
+  }
 }
 
 .section03-image-column-wrap {
   width: 50%;
-  padding: 0 get-vw(10);
+  padding: 0 10px;
+
+  @include largeScreenWidthLess() {
+    padding: 0 5px;
+  }
 }
 
 .section03-image-column-inner {
