@@ -179,7 +179,7 @@
 .section07-specification-lists {
   @include font-rem(13);
 
-  line-height: 1;
+  line-height: 1.3;
   letter-spacing: 0.158536585em;
   color: $PRIMARY_COLOR;
   display: flex;
@@ -216,9 +216,18 @@
   }
 }
 
+.section07-specification-list-description {
+  width: (460 / 720) * 100%;
+
+  @include largeScreenWidthLess() {
+    width: 100%;
+  }
+}
+
 .section07-specification-detail {
   @include font-rem(13);
 
+  width: (460 / 720) * 100%;
   display: inline-block;
   line-height: 1;
   letter-spacing: 0.203125em;
