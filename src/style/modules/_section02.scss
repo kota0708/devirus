@@ -116,6 +116,7 @@
 .section02-arrow-wrap {
   width: (14 / 610) * 100%;
   margin: 0 auto;
+  display: block;
 
   @include largeScreenWidthLess() {
     width: (16 / 312) * 100%;
